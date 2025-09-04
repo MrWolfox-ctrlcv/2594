@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
   <!-- bootstrap5CSS文件 -->
   <script src="http://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+
   <title>个人社保计算软件</title>
 </head>
 <body>
 
   <div class="container text-center">
-    <h2>个人社保计算软件-zbdx-ysw</h2>
+    <h2>个人社保计算软件简要示例</h2>
     <table class="table table-bordered table-striped">
       <tr>
         <td>工资</td>
@@ -20,7 +21,7 @@
           <input class="form-control" type="text" id="salary" placeholder="请输入工资">
         </td>
         <td>
-          <button class="btn btn-danger btn-block">计算</button>
+          <button class="btn btn-danger btn-block" onclick="calculate()">计算</button>
         </td>
       </tr>
       <tr class="bg-primary text-white">
@@ -33,57 +34,59 @@
       <tr>
         <td>养老</td>
         <td>8%</td>
-        <td></td>
+        <td id="pension"></td>
         <td>20%</td>
-        <td></td>
+        <td id="cpension"></td>
       </tr>
       <tr>
         <td>医保</td>
         <td>2%</td>
-        <td></td>
+        <td id="medical"></td>
         <td>6%</td>
-        <td></td>
+        <td id="cmedical"></td>
       </tr>
       <tr>
         <td>失业</td>
         <td>0.5%</td>
-        <td></td>
+        <td id="unemployment"></td>
         <td>1.5%</td>
-        <td></td>
+        <td id="cunemployment"></td>
       </tr>
       <tr>
         <td>工伤</td>
         <td></td>
         <td></td>
         <td>0.5%</td>
-        <td></td>
+        <td id="injury"></td>
       <tr>
         <td>生育</td>
         <td></td>
         <td></td>
         <td>0.8%</td>
-        <td></td>
+        <td id="birth"></td>
       </tr>
       <tr>
         <td>公积金</td>
-        <td>12&</td>
-        <td></td>
         <td>12%</td>
-        <td></td>
+        <td id="providentFund"></td>
+        <td>12%</td>
+        <td id="cprovidentFund"></td>
       </tr>
       <tr>
         <td>合计</td>
         <td>个人合计</td>
-        <td></td>
+        <td id="pt"></td>
         <td>公司合计</td>
-        <td></td>
+        <td id="cpt"></td>
       </tr>
       <tr>
         <td>总额</td>
-        <td colspan="4"></td>
+        <td colspan="4" id="total"></td>
       </tr>
     </table>
   </div>
-  
-</body>
+
+  <script src="./math.js"></script>
+
+  </body>
 </html>
